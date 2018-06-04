@@ -1,9 +1,86 @@
 .game {
-	display: flex;
-	justify-content: space-around;
-	&-column {
-		width: 20vw;
-		height: 80vh;
-		border: 2px solid;
+	position: relative;
+	&-scroll {
+		position: absolute;
+		z-index: 2;
+		width: 60vw;
+		display: flex;
+		justify-content: space-around;
+		border-bottom: 2px solid red;
+		&-column {
+			width: 15vw;
+			height: 81.5vh;
+			border-left: 2px solid;
+			border-right: 2px solid;
+		}
 	}
+	&-result {
+		position: absolute;
+		width: 60vw;
+		z-index: 3;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 10vh;
+		top: 80vh;
+		&-letter {
+			padding: 20px;
+			font-size: 50px;
+		}
+	}
+	&-scoreContainer {
+		position: absolute;
+		left: 65%;
+		width: 30vw;
+		height: 40vh;
+		border: solid 2px black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-showScore {
+		position: absolute; 
+		color: black; 
+		margin-top: -20px; 
+	}
+
+	&-multiplicatorContainer {
+		position: absolute;
+		margin-top: 10px; 
+	}
+
+	&-multiplicator1 {
+		padding-left: 10px;
+		color: black;
+		display: block;
+	}
+
+	&-multiplicator2 {
+		padding-left: 10px;
+		color: black; 
+		display: none;
+	}
+
+	&-multiplicator3 {
+		padding-left: 10px;
+		color: black; 
+		display: none;
+	}
+
+	&-multiplicator4 {
+		padding-left: 10px;
+		color: black; 
+		display: none;
+	}
+
+
+}
+.letter {
+	z-index: 1;
+	width: 11vw;
+	padding: 1vw;
+	font-size: 30px;
+	margin: 1vw;
+	position: absolute;
+	text-align: center;
 }
