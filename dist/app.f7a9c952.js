@@ -338,6 +338,7 @@ function deleteLetter(letter) {
 		multiplicator3.style.display = 'none';
 		multiplicator4.style.display = 'none';
 		multiplicator1.style.display = 'block';
+		letters[counter].parentNode.removeChild(letters[counter]);
 		return false;
 	}
 	letters[counter].parentNode.removeChild(letters[counter]);
@@ -356,8 +357,11 @@ function correct(code, indic) {
 
 	if (myDelete) {
 		sets.collection.shift();
+		updateScore(indic);
+	} else {
+		sets.collection.shift();
+		updateScore(0);
 	}
-	updateScore(indic);
 }
 
 function hitSpace() {
